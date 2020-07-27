@@ -56,7 +56,6 @@ window.addEventListener("DOMSubtreeModified", function () {
 });
 
 function calculatePrice(stock, from, to, fromCurrencyType, toCurrencyType) {
-    debugger;
     const baseCalc = (stock / to) * from;
     let finalPrice = baseCalc;
     let purchaseQuantity = stock;
