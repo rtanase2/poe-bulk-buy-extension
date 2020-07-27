@@ -7,10 +7,10 @@
     "js": ["addButton.js"],
   "css": ["addButton.css"]}],
   "icons": {
-    "16": "images/pikachu 18.png",
-    "32": "images/pikachu 36.png",
-    "48": "images/pikachu 72.png",
-    "128": "images/pikachu 1156.png"
+    "16": "images/icon_18.png",
+    "32": "images/icon_36.png",
+    "48": "images/icon_72.png",
+    "128": "images/icon_128.png"
   },
   "manifest_version": 2
 }
