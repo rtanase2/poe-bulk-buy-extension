@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98bd8223-64da-4c35-93de-31e4a942390e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yao ming 1156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yao ming 18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yao ming 36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yao ming 72 v2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery-3.5.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/addButton.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,20 +24,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="204">
+              <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -84,8 +72,8 @@
         <option value="$PROJECT_DIR$/popup.html" />
         <option value="$PROJECT_DIR$/background.js" />
         <option value="$PROJECT_DIR$/addButton.css" />
-        <option value="$PROJECT_DIR$/addButton.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/addButton.js" />
       </list>
     </option>
   </component>
@@ -154,12 +142,12 @@
       <option name="presentableId" value="Default" />
       <updated>1595795798742</updated>
       <workItem from="1595795801594" duration="16652000" />
-      <workItem from="1595813185558" duration="97000" />
+      <workItem from="1595813185558" duration="284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16749000" />
+    <option name="totallyTimeSpent" value="16936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="445" y="39" width="1400" height="1000" extended-state="0" />
@@ -236,6 +224,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addButton.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -245,15 +240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
         </state>
       </provider>
     </entry>

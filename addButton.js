@@ -10,22 +10,22 @@ window.addEventListener("DOMSubtreeModified", function(_) {
             const row = event.target;
             // if no data-id then this isn't a valid row to add a button to
             if(row != null && row.getAttribute('data-id')) {
+                // don't show button for mirrors since they are not supported
+                const fromCurrencyType = row.querySelector('.price-right .currency-text').innerText;
+                if (fromCurrencyType === 'Mirror of Kalandra') {
+                    return;
+                }
+
                 const rowID = row.getAttribute('data-id');
                 const characterName = row.querySelector('.character-name').innerText.split(': ')[1];
                 const fromPrice = Number(row.querySelector('.price-right > .price-block > span:first-child').innerText);
                 const toPrice = Number(row.querySelector('.price-left > .price-block > span:last-child').innerText);
-                const fromCurrencyType = row.querySelector('.price-right .currency-text').innerText;
                 const toCurrencyType = row.querySelector('.price-left .currency-text').innerText;
                 const stock = Number(row.querySelector('.stock > span').innerText);
                 const leagueName = row.querySelector('.status').getAttribute('title');
                 const price = calculatePriceForAll(stock, fromPrice, toPrice, fromCurrencyType);
                 const message = getBulkPurchaseMessage(characterName, stock, toCurrencyType, price, fromCurrencyType, leagueName);
                 const bulkPurchaseElementID = `${rowID}_bulkPurchaseMessage`;
-
-
-                if (toCurrencyType === 'Mirror of Kalandra') {
-                    return;
-                }
 
                 // add input containing message to copy
                 let bulkPurchaseInput = document.createElement('input');
@@ -47,6 +47,7 @@ window.addEventListener("DOMSubtreeModified", function(_) {
 
             // TODO don't add button for mirrors (alternatively, could add alert saying we don't eval mirrors)
             // TODO if breaking ex into smaller currency, only buy the amount that === full exalt, no decimals
+            // TODO update icon
             // TODO Fix formatting if screen width is narrow
         });
     }
