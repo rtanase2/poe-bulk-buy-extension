@@ -56,6 +56,7 @@ window.addEventListener("DOMSubtreeModified", function () {
 });
 
 function calculatePrice(stock, from, to, fromCurrencyType, toCurrencyType) {
+    debugger;
     const baseCalc = (stock / to) * from;
     let finalPrice = baseCalc;
     let purchaseQuantity = stock;
@@ -80,7 +81,9 @@ function calculatePrice(stock, from, to, fromCurrencyType, toCurrencyType) {
         // else, round up to the nearest tenth place
         // 6.09 + .05 = 6.14 * 10 = 61.4 -> 61 / 10 = 6.1
         // 6.01 + .05 = 6.06 * 10 = 60.6 -> 61 / 10 = 6.1
-        finalPrice = Math.round((baseCalc + .05) * 10) / 10;
+        if (!isWholeNumber(baseCalc)) {
+            finalPrice = Math.round((baseCalc + .05) * 10) / 10;
+        }
     } else {
         if (!isWholeNumber(baseCalc)) {
             finalPrice = Math.ceil(baseCalc);

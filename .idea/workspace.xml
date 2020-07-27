@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98bd8223-64da-4c35-93de-31e4a942390e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/addButton.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+            <state relative-caret-position="315">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
@@ -78,8 +79,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="99" />
-    <option name="y" value="29" />
+    <option name="x" value="-18" />
+    <option name="y" value="151" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -142,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595795798742</updated>
       <workItem from="1595795801594" duration="16652000" />
-      <workItem from="1595813185558" duration="939000" />
+      <workItem from="1595813185558" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="Format and remove TODOS">
       <created>1595813951178</created>
@@ -158,14 +159,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595814044405</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Silence lint errors">
+      <created>1595814179808</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595814179808</updated>
+    </task>
+    <task id="LOCAL-00004" summary="If breaking exalt into smaller currencies, round to nearest exalt">
+      <created>1595816208463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595816208463</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17591000" />
+    <option name="totallyTimeSpent" value="19917000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="99" y="29" width="1400" height="1000" extended-state="0" />
+    <frame x="5" y="150" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
@@ -194,7 +209,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Format and remove TODOS" />
     <MESSAGE value="Change switch to if check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change switch to if check" />
+    <MESSAGE value="Silence lint errors" />
+    <MESSAGE value="If breaking exalt into smaller currencies, round to nearest exalt" />
+    <option name="LAST_COMMIT_MESSAGE" value="If breaking exalt into smaller currencies, round to nearest exalt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/popup.html">
@@ -261,8 +278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        <state relative-caret-position="315">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
