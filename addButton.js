@@ -5,15 +5,22 @@ const EXALT = 'Exalted Orb';
 const PRICE_KEY = 'price';
 const QUANTITY_PURCHASED_KEY = 'quantity_purchased';
 
-let listenerAdded = false;
+let addedRowListener = false;
+let isExchangeTabActive = window.location.pathname.includes('exchange');
+
 window.addEventListener("DOMSubtreeModified", addRowListenerHandler);
+window.addEventListener('click', function() {
+    isExchangeTabActive = document.querySelector('li.active').innerHTML.includes('exchange');
+});
 
 function addRowListenerHandler() {
-    let resultsContainer = document.getElementsByClassName('results');
-    if (resultsContainer.length && !listenerAdded) {
-        listenerAdded = true;
-        resultsContainer = resultsContainer[0];
-        resultsContainer.addEventListener("DOMNodeInserted", addButtonHandler);
+    if (!addedRowListener) {
+        let resultsContainer = document.getElementsByClassName('results');
+        if(resultsContainer.length) {
+            addedRowListener = true;
+            resultsContainer = resultsContainer[0];
+            resultsContainer.addEventListener("DOMNodeInserted", addButtonHandler);
+        }
     }
 }
 
