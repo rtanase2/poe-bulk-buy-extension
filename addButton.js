@@ -45,27 +45,27 @@ window.addEventListener("DOMSubtreeModified", function (_) {
                 row.querySelector('.btns > .pull-left').append(button);
             }
 
-            // TODO if breaking ex into smaller currency, only buy the amount that === full exalt, no decimals
             // TODO update icon
         });
     }
 });
 
 function calculatePriceForAll(stock, from, to, fromCurrencyType) {
+    // TODO if breaking ex into smaller currency, only buy the amount that === full exalt, no decimals
     const baseCalc = (stock / to) * from;
-    switch (fromCurrencyType) {
-        case 'Exalted Orb':
-            // if it's a whole number, return that
-            if (baseCalc - Math.floor(baseCalc) === 0) {
-                return baseCalc;
-            }
-            // else, round up to the nearest tenth place
-            // 6.09 + .05 = 6.14 * 10 = 61.4 -> 61 / 10 = 6.1
-            // 6.01 + .05 = 6.06 * 10 = 60.6 -> 61 / 10 = 6.1
-            return Math.round((baseCalc + .05) * 10) / 10;
-        default:
-            return Math.ceil(baseCalc);
+
+    if (fromCurrencyType === 'Exalted Orb') {
+        // if it's a whole number, return that
+        if (baseCalc - Math.floor(baseCalc) === 0) {
+            return baseCalc;
+        }
+        // else, round up to the nearest tenth place
+        // 6.09 + .05 = 6.14 * 10 = 61.4 -> 61 / 10 = 6.1
+        // 6.01 + .05 = 6.06 * 10 = 60.6 -> 61 / 10 = 6.1
+        return Math.round((baseCalc + .05) * 10) / 10;
     }
+
+    return Math.ceil(baseCalc);
 }
 
 function copyBulkPurchaseMessage(elementID) {
