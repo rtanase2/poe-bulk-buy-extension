@@ -4,7 +4,7 @@
   "description": "Adds a button to the Path of Exile bulk trade site which allows you to copy a whisper message to buy all of the offered item. If the currency you are buying with is chaos or less then offer will be rounded up to next unit. If trading in exalts, the value will be rounded to the nearest tenth place. WARNING: Mirrors will round to the next whole number, so not recommend for mirror trades!",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "content_scripts": [{"matches": ["https://*.pathofexile.com/*"],
-    "js": ["addButton.js", "jquery-3.5.1.min.js"],
+    "js": ["addButton.js"],
   "css": ["addButton.css"]}],
   "icons": {
     "16": "images/pikachu 18.png",
