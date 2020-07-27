@@ -1,7 +1,10 @@
 'use strict';
 
+const MIRROR = 'Mirror of Kalandra';
+const EXALT = 'Exalted Orb';
+
 let listenerAdded = false;
-window.addEventListener("DOMSubtreeModified", function (_) {
+window.addEventListener("DOMSubtreeModified", function () {
     let resultsContainer = document.getElementsByClassName('results');
     if (resultsContainer.length && !listenerAdded) {
         listenerAdded = true;
@@ -12,7 +15,7 @@ window.addEventListener("DOMSubtreeModified", function (_) {
             if (row != null && row.getAttribute('data-id')) {
                 // don't show button for mirrors since they are not supported
                 const fromCurrencyType = row.querySelector('.price-right .currency-text').innerText;
-                if (fromCurrencyType === 'Mirror of Kalandra') {
+                if (fromCurrencyType === MIRROR) {
                     return;
                 }
 
@@ -39,7 +42,7 @@ window.addEventListener("DOMSubtreeModified", function (_) {
                 let button = document.createElement("button");
                 button.innerHTML = 'Buy All';
                 button.classList.add("btn", "btn-default");
-                button.onclick = function (_) {
+                button.onclick = function () {
                     copyBulkPurchaseMessage(bulkPurchaseElementID);
                 };
                 row.querySelector('.btns > .pull-left').append(button);
@@ -54,7 +57,7 @@ function calculatePriceForAll(stock, from, to, fromCurrencyType) {
     // TODO if breaking ex into smaller currency, only buy the amount that === full exalt, no decimals
     const baseCalc = (stock / to) * from;
 
-    if (fromCurrencyType === 'Exalted Orb') {
+    if (fromCurrencyType === EXALT) {
         // if it's a whole number, return that
         if (baseCalc - Math.floor(baseCalc) === 0) {
             return baseCalc;
