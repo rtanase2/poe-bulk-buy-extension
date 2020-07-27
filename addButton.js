@@ -4,9 +4,6 @@ const MIRROR = 'Mirror of Kalandra';
 const EXALT = 'Exalted Orb';
 const PRICE_KEY = 'price';
 const QUANTITY_PURCHASED_KEY = 'quantity_purchased';
-const INVENTORY_SLOTS = 60;
-
-const MAX_LIMIT_FOR_CURRENCY = {MIRROR: INVENTORY_SLOTS*10, EXALT: INVENTORY_SLOTS*10}
 
 let listenerAdded = false;
 window.addEventListener("DOMSubtreeModified", function () {
