@@ -6,54 +6,58 @@ const PRICE_KEY = 'price';
 const QUANTITY_PURCHASED_KEY = 'quantity_purchased';
 
 let listenerAdded = false;
-window.addEventListener("DOMSubtreeModified", function () {
+window.addEventListener("DOMSubtreeModified", addRowListenerHandler);
+
+function addRowListenerHandler() {
     let resultsContainer = document.getElementsByClassName('results');
     if (resultsContainer.length && !listenerAdded) {
         listenerAdded = true;
         resultsContainer = resultsContainer[0];
-        resultsContainer.addEventListener("DOMNodeInserted", function (event) {
-            const row = event.target;
-            // if no data-id then this isn't a valid row to add a button to
-            if (row != null && row.getAttribute('data-id')) {
-                // don't show button for mirrors since they are not supported
-                const fromCurrencyType = row.querySelector('.price-right .currency-text').innerText;
-                if (fromCurrencyType === MIRROR) {
-                    return;
-                }
-
-                const rowID = row.getAttribute('data-id');
-                const characterName = row.querySelector('.character-name').innerText.split(': ')[1];
-                const fromPrice = Number(row.querySelector('.price-right > .price-block > span:first-child').innerText);
-                const toPrice = Number(row.querySelector('.price-left > .price-block > span:last-child').innerText);
-                const toCurrencyType = row.querySelector('.price-left .currency-text').innerText;
-                const stock = Number(row.querySelector('.stock > span').innerText);
-                const leagueName = row.querySelector('.status').getAttribute('title');
-                const calculatePriceReturn = calculatePrice(stock, fromPrice, toPrice, fromCurrencyType, toCurrencyType);
-                const price = calculatePriceReturn[PRICE_KEY];
-                const quantityPurchased = calculatePriceReturn[QUANTITY_PURCHASED_KEY];
-                const message = getBulkPurchaseMessage(characterName, quantityPurchased, toCurrencyType, price, fromCurrencyType, leagueName);
-                const bulkPurchaseElementID = `${rowID}_bulkPurchaseMessage`;
-
-                // add input containing message to copy
-                let bulkPurchaseInput = document.createElement('input');
-                bulkPurchaseInput.type = 'text';
-                bulkPurchaseInput.value = message;
-                bulkPurchaseInput.id = bulkPurchaseElementID;
-                bulkPurchaseInput.classList.add('hidden');
-                row.append(bulkPurchaseInput);
-
-                // create button
-                let button = document.createElement("button");
-                button.innerHTML = 'Buy All';
-                button.classList.add("btn", "btn-default");
-                button.onclick = function () {
-                    copyBulkPurchaseMessage(bulkPurchaseElementID);
-                };
-                row.querySelector('.btns > .pull-left').append(button);
-            }
-        });
+        resultsContainer.addEventListener("DOMNodeInserted", addButtonHandler);
     }
-});
+}
+
+function addButtonHandler(event) {
+    const row = event.target;
+    // if no data-id then this isn't a valid row to add a button to
+    if (row != null && row.getAttribute('data-id')) {
+        // don't show button for mirrors since they are not supported
+        const fromCurrencyType = row.querySelector('.price-right .currency-text').innerText;
+        if (fromCurrencyType === MIRROR) {
+            return;
+        }
+
+        const rowID = row.getAttribute('data-id');
+        const characterName = row.querySelector('.character-name').innerText.split(': ')[1];
+        const fromPrice = Number(row.querySelector('.price-right > .price-block > span:first-child').innerText);
+        const toPrice = Number(row.querySelector('.price-left > .price-block > span:last-child').innerText);
+        const toCurrencyType = row.querySelector('.price-left .currency-text').innerText;
+        const stock = Number(row.querySelector('.stock > span').innerText);
+        const leagueName = row.querySelector('.status').getAttribute('title');
+        const calculatePriceReturn = calculatePrice(stock, fromPrice, toPrice, fromCurrencyType, toCurrencyType);
+        const price = calculatePriceReturn[PRICE_KEY];
+        const quantityPurchased = calculatePriceReturn[QUANTITY_PURCHASED_KEY];
+        const message = getBulkPurchaseMessage(characterName, quantityPurchased, toCurrencyType, price, fromCurrencyType, leagueName);
+        const bulkPurchaseElementID = `${rowID}_bulkPurchaseMessage`;
+
+        // add input containing message to copy
+        let bulkPurchaseInput = document.createElement('input');
+        bulkPurchaseInput.type = 'text';
+        bulkPurchaseInput.value = message;
+        bulkPurchaseInput.id = bulkPurchaseElementID;
+        bulkPurchaseInput.classList.add('hidden');
+        row.append(bulkPurchaseInput);
+
+        // create button
+        let button = document.createElement("button");
+        button.innerHTML = 'Buy All';
+        button.classList.add("btn", "btn-default");
+        button.onclick = function () {
+            copyBulkPurchaseMessage(bulkPurchaseElementID);
+        };
+        row.querySelector('.btns > .pull-left').append(button);
+    }
+}
 
 function calculatePrice(stock, from, to, fromCurrencyType, toCurrencyType) {
     const baseCalc = (stock / to) * from;
