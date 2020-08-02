@@ -1,8 +1,8 @@
 {
   "name": "PoE Bulk Trade - Buy All",
-  "version": "1.0",
-  "description": "Adds a button to the Path of Exile bulk trade site which allows you to copy a whisper message to buy all of the offered item. If the currency you are buying with is chaos or less then offer will be rounded up to next unit. If trading in exalts, the value will be rounded to the nearest tenth place. Mirror purchases are not supported.",
-  "permissions": ["declarativeContent"],
+  "version": "0.1",
+  "description": "Adds a button to the Path of Exile bulk trade site which allows you to copy a whisper message to buy all of the offered item.",
+  "permissions": [],
   "content_scripts": [{"matches": ["https://*.pathofexile.com/trade/*"],
     "js": ["addButton.js"],
   "css": ["addButton.css"]}],
