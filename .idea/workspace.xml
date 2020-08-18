@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/addButton.js" line="66" />
+    <bookmark url="file://$PROJECT_DIR$/addButton.js" line="65" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98bd8223-64da-4c35-93de-31e4a942390e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/addButton.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="623">
+              <caret line="60" column="110" selection-start-line="60" selection-start-column="110" selection-end-line="60" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -67,6 +68,7 @@
       <find>decl</find>
       <find>declarativeContent</find>
       <find>clickEvent</find>
+      <find>copyBulkPurchaseMessage</find>
     </findStrings>
     <replaceStrings>
       <replace>row</replace>
@@ -88,16 +90,16 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="288" />
-    <option name="y" value="94" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,7 +116,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,7 +157,8 @@
       <workItem from="1595825412106" duration="10028000" />
       <workItem from="1596388805979" duration="190000" />
       <workItem from="1596389055877" duration="3536000" />
-      <workItem from="1597117735047" duration="5829000" />
+      <workItem from="1597117735047" duration="7442000" />
+      <workItem from="1597719892376" duration="1421000" />
     </task>
     <task id="LOCAL-00001" summary="Format and remove TODOS">
       <created>1595813951178</created>
@@ -190,7 +192,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41473000" />
+    <option name="totallyTimeSpent" value="44507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -246,6 +248,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consts/currencyNameConsts.js" />
     <entry file="file://$PROJECT_DIR$/addButton.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -253,18 +256,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consts/currencyNameConsts.js" />
-    <entry file="file://$PROJECT_DIR$/addButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="60" column="110" selection-start-line="60" selection-start-column="110" selection-end-line="60" selection-end-column="110" />
         </state>
       </provider>
     </entry>

@@ -58,8 +58,7 @@ function addButtonClickListener(event) {
         button.onclick = function () {
             if (row.querySelector('textarea') !== null) {
                 const defaultMessage = row.querySelector('textarea').value;
-                const message = getBulkPurchaseMessageV2(defaultMessage, quantityPurchased, price);
-                bulkPurchaseInput.value = message;
+                bulkPurchaseInput.value =  getBulkPurchaseMessageV2(defaultMessage, quantityPurchased, price);
                 copyBulkPurchaseMessage(bulkPurchaseElementID);
             } else {
                 alert('Please press the Contact... button before attempting to buy all');
@@ -116,24 +115,17 @@ function copyBulkPurchaseMessage(elementID) {
     copyInput.classList.add('hidden');
 }
 
-function getBulkPurchaseMessage(characterName, stock, toCurrencyType, price, fromCurrencyType, leagueName) {
-    return `@${characterName} Hi, I'd like to buy your ${stock} ${toCurrencyType} for my ${price} ${fromCurrencyType} in ${leagueName}.`;
-}
-
 function getBulkPurchaseMessageV2(defaultMessage, stock, price) {
-    // TODO add edge case catch for korean and german
-    // german "'123"
-    // korean "<characters>123"
     const messageParts = defaultMessage.split(" ");
-    const firstNumberIndex = messageParts.findIndex(stringIsNumber);
-    messageParts[firstNumberIndex] = stock;
-    const secondNumberIndex = messageParts.findIndex(stringIsNumber);
-    messageParts[secondNumberIndex] = price;
+    let numsReplaced = 0;
+    for (let i = 0; i < messageParts.length && numsReplaced < 2; i++) {
+        const currentVal = messageParts[i];
+        if (currentVal.search(/[1-9]+/) !== -1) {
+            messageParts[i] = currentVal.replace(/[1-9]+/, numsReplaced == 0 ? stock : price);
+            numsReplaced += 1;
+        }
+    }
     return messageParts.join(' ');
-}
-
-function stringIsNumber(s) {
-    return String(Number(s)) === s;
 }
 
 function isWholeNumber(num) {
