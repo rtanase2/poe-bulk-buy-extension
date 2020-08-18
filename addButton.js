@@ -117,7 +117,6 @@ function getBulkPurchaseMessageV2(defaultMessage, stock, price) {
     for (let i = 0; i < messageParts.length && numsReplaced < 2; i++) {
         const currentVal = messageParts[i];
         if (currentVal.search(/[0-9]+/) !== -1) {
-            console.log(currentVal.match(/[0-9]+/));
             messageParts[i] = currentVal.replace(/[0-9]+/, numsReplaced == 0 ? stock : price);
             numsReplaced += 1;
         }
