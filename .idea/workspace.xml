@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98bd8223-64da-4c35-93de-31e4a942390e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/addButton.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="118" column="49" selection-start-line="118" selection-start-column="49" selection-end-line="118" selection-end-column="49" />
+            <state relative-caret-position="620">
+              <caret line="119" column="64" selection-start-line="119" selection-start-column="64" selection-end-line="119" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -84,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="288" />
     <option name="y" value="94" />
     <option name="width" value="1400" />
@@ -153,6 +154,7 @@
       <workItem from="1595825412106" duration="10028000" />
       <workItem from="1596388805979" duration="190000" />
       <workItem from="1596389055877" duration="3536000" />
+      <workItem from="1597732570663" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Format and remove TODOS">
       <created>1595813951178</created>
@@ -186,13 +188,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36294000" />
+    <option name="totallyTimeSpent" value="36414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12802951" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.091675445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -242,6 +244,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consts/currencyNameConsts.js" />
     <entry file="file://$PROJECT_DIR$/addButton.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -249,18 +252,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consts/currencyNameConsts.js" />
-    <entry file="file://$PROJECT_DIR$/addButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="118" column="49" selection-start-line="118" selection-start-column="49" selection-end-line="118" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="119" column="64" selection-start-line="119" selection-start-column="64" selection-end-line="119" selection-end-column="64" />
         </state>
       </provider>
     </entry>
